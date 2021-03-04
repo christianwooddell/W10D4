@@ -1,14 +1,11 @@
 const path = require('path');
 
 module.exports = {
-    entry: './todo_redux.jsx',
+    context: __dirname,
+    entry: './frontend/todo_redux.jsx',
     output: {
         path: path.resolve(__dirname),
         filename: 'bundle.js'
-    },
-    devtool: 'source-map',
-    resolve: {
-        extensions: [".js", ".jsx", "*"],
     },
     module: {
         rules: [
@@ -23,5 +20,9 @@ module.exports = {
                 },
             }
         ]
+    },
+    devtool: 'source-map',
+    resolve: {
+        extensions: [".js", ".jsx", "*"]
     }
 }
